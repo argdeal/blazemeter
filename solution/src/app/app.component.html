@@ -1,0 +1,14 @@
+<sidebar
+  *ngIf="showSidebar; else sidebarClosed"
+  [data]="data$"
+  (refresh)="refreshData()"
+  (close)="onShowSidebar(false)"
+>
+</sidebar>
+
+<ng-template #sidebarClosed>
+  <button class="btn" (click)="onShowSidebar(true)">
+    <i class="fa fa-folder"></i>
+    <span>Show Sidebar</span>
+  </button>
+</ng-template>

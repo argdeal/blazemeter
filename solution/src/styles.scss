@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+ul { 
+  list-style: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+::-ms-clear{ display: none; }
+
+.flex-between-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

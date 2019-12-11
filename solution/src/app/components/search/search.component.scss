@@ -1,0 +1,33 @@
+@import "../../../assets/scss/shared";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 250px;
+
+  input {
+    padding: 9px 7px;
+    border: none;
+  }
+  
+  ::placeholder {
+    color: $elements-color;
+    font-style: italic;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: -10px;
+    margin-right: 3px;
+
+    .fas {
+      line-height: 0.7;
+      color: $elements-color;
+      cursor: pointer;
+    }
+  }
+}

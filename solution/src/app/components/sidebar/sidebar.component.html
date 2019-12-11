@@ -1,0 +1,24 @@
+<div class="container">
+  <header>
+    <section class="top flex-between-center">
+      <h3>
+        Reports
+        <span *ngIf="(items$ | async) as items">{{ items.length }}</span>
+      </h3>
+      <section class="toolbar">
+        <i class="fas fa-redo-alt" (click)="onRefresh()"></i>
+        <i class="fas fa-times" (click)="onClose()"></i>
+      </section>
+    </section>
+    <section class="bottom flex-between-center">
+      <search
+        (sort)="onSort($event)"
+        (search)="onSearch($event)"
+      ></search>
+    </section>
+  </header>
+
+  <ng-container *ngIf="(items$ | async) as items">
+      <list [items]="items"></list>
+  </ng-container>
+</div>

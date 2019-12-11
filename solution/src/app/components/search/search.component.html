@@ -1,0 +1,12 @@
+<div class="container">
+  <input 
+    type="text" 
+    placeholder="search reports" 
+    #inputTxt
+    (input)="term$.next(inputTxt.value)"
+  >
+  <section class="toolbar">
+      <span class="fas fa-caret-up" (click)="onSort(true)"></span>
+      <span class="fas fa-caret-down" (click)="onSort(false)"></span>
+  </section>
+</div>
